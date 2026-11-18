@@ -1,0 +1,209 @@
+
+/* Default theme variables */
+:root {
+    --background: #f1f5f9;
+    --card: #ffffff;
+    --text: #1e293b;
+    --secondary: #64748b;
+    --border: #e2e8f0;
+    --accent: #6366f1;
+    --input: #f8fafc;
+}
+
+body.dark {
+    --background: #0f172a;
+    --card: #1e293b;
+    --text: #f1f5f9;
+    --secondary: #94a3b8;
+    --border: #334155;
+    --accent: #818cf8;
+    --input: #0f172a;
+}
+
+/* General styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Main container */
+.container {
+    width: 100%;
+    max-width: 480px;
+    background: var(--card);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.header h1 {
+    font-size: 25px;
+}
+
+#theme-toggle {
+    padding: 10px;
+    border: 1px solid var(--border);
+    background: var(--input);
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.subtitle {
+    color: var(--secondary);
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+/* Password display */
+.password-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+#password {
+    flex: 1;
+    min-width: 0;
+    padding: 14px;
+    background: var(--input);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+#copy-btn {
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Settings */
+.settings h3 {
+    margin: 20px 0 15px;
+    font-size: 16px;
+}
+
+.length-setting {
+    margin-bottom: 20px;
+}
+
+.length-setting label {
+    display: block;
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+#length {
+    width: 100%;
+    cursor: pointer;
+    accent-color: var(--accent);
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: var(--secondary);
+    cursor: pointer;
+}
+
+.option input {
+    accent-color: var(--accent);
+    width: 16px;
+    height: 16px;
+}
+
+/* Strength indicator */
+.strength-section {
+    margin: 25px 0;
+}
+
+.strength-section p {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+#strength {
+    font-weight: bold;
+}
+
+.strength-bar {
+    height: 8px;
+    width: 100%;
+    background: var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#strength-fill {
+    height: 100%;
+    width: 0%;
+    background: #22c55e;
+    transition: width 0.3s, background 0.3s;
+}
+
+/* Generate button */
+#generate-btn {
+    width: 100%;
+    padding: 15px;
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+#message {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 13px;
+    color: var(--secondary);
+}
+
+/* Responsive design */
+@media (max-width: 400px) {
+    .container {
+        padding: 20px;
+    }
+
+    .header h1 {
+        font-size: 20px;
+    }
+}
